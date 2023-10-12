@@ -6,9 +6,10 @@
 Browser Extension - Add your favorite background on all websites !
 
 Tired of those boring white backgrounds on every site ?
+Do you want to have your own style ?
 You should try YourBackgroundEverywhere !
 
-- :leaves: Lightweight, 600Kb only.
+- :leaves: Lightweight, only 1Mb.
 - :art: Customisable, change opacity of the background, and active reading mode as you want !
 - :handshake: Easy to contribute or modify local, less than 200 lines of Javascript.
 
