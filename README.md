@@ -1,3 +1,5 @@
+![YourBackgroundEverywhere's logo](https://github.com/Otomatyk/YourBackgroundEverywhere/blob/main/images/logo.png)
+
 # YourBackgroundEverywhere
 Browser Extension - Add your favorite background on all websites !
 
@@ -13,4 +15,4 @@ You should try YourBackgroundEverywhere !
 If you have found a bug, a performance issue, a suggestion or just a question, you can submit an Issue.
 Add a tag in the title such as (Bug) or (Feature) then describe your problems/idea.
 
-Star the project help me a lot :dizzy: !
+Star the project help me a lot ⭐ !
