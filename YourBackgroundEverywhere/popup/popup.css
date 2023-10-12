@@ -1,0 +1,43 @@
+html {
+    width: 500px;
+    height: 300px;
+
+    font-size: large;
+    font-family: sans-serif !important;
+    padding: 0.5em;
+    overflow: hidden;
+    background-color: #0b0f18;
+    color: white;
+}
+
+h1 {
+    font-size: medium;
+}
+
+label, code {
+    border-radius: 0.25em;
+    background-color: white;
+    color: #0b0f18;
+    padding: 0.2em;
+}
+
+#params {
+    display: flex;
+    flex-direction: column;
+    align-content: flex-end;
+}
+
+#params > span {
+    margin-block: 0.4em;
+    width: 100%;
+}
+
+#params span :is(label, input) {
+    width: 50%;
+    margin-right: 2.5%;
+}
+
+section p {
+    border-left: 3px gray solid;
+    padding-left: 1em;
+}

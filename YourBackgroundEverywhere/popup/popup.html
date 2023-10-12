@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <div id="popup-content">
+        <h1>YourBackgroundEverywhere's setting</h1>
+        <div id="params">
+            <span>
+                <input type="range" id="opacity-range" min="1" max="11"><label id="opacity-label">Opacity</label>
+            </span>
+    
+            <span>
+                <input type="range" id="reading-level-range" min="0" max="8"><label id="reading-level-label">Reading mode level</label>
+            </span>
+    
+            <span>
+                <input type="checkbox" id="disabled"><label>Disabled</label>
+            </span>
+        </div>
+
+        <section>
+            <h2>How to change the background ?</h2>
+            <p>
+                Go to the extensions page (<code>chrome://extensions</code>, in most case).<br>
+                Click on <code>YourBackgroundEverywhere</code> > <code>Details</code> extension.<br>
+                Scroll down to the "source" section, then click on the link next to "loaded from".<br>
+                Move into the <code>insert_your_backgrounds_here</code> folder. <br>
+                And put your background image with the name of <code>background_1</code> !
+            </p>
+        </section>
+
+        <p id="debug-message" hidden></p>
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+</html>
