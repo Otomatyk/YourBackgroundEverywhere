@@ -1,9 +1,10 @@
 ![YourBackgroundEverywhere's logo](https://github.com/Otomatyk/YourBackgroundEverywhere/blob/main/images/logo.png)
 
+(If you have a logo suggestion, I'd love to hear from you.)
+
 # YourBackgroundEverywhere
 Browser Extension - Add your favorite background on all websites !
 
--------
 Tired of those boring white backgrounds on every site ?
 You should try YourBackgroundEverywhere !
 
@@ -11,8 +12,16 @@ You should try YourBackgroundEverywhere !
 - :art: Customisable, change opacity of the background, and active reading mode as you want !
 - :handshake: Easy to contribute or modify local, less than 200 lines of Javascript.
 
+## Installation
+First, you need to install this repo, on this page, follow the instructions given in the blue `Code` button.
+Go the `YourBackgroundEverywhere/insert_your_background_here` folder, and read `README.txt` to find out how to the change the default background.
+
+After it, you have to "pack" the extension, to do so, open your in your browser chrome://extensions, edge://extensions ... ect or click on the top-right corner button (The puzzle piece) > `Manage extensions`.
+Then, active the Developper Mode, the button should be in one of the top corners.
+Press `Load unpacked` and select the `YourBackgroundEverywhereExtension` folder.
+
 ## How do I contribute ?
-If you have found a bug, a performance issue, a suggestion or just a question, you can submit an Issue.
+If you have found a bug, a performance issue, a site where the extension doesn't work or if you've a suggestion, you can submit an Issue.
 Add a tag in the title such as (Bug) or (Feature) then describe your problems/idea.
 
 Star the project help me a lot ⭐ !
