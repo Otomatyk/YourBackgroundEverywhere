@@ -23,6 +23,9 @@ Press `Load unpacked` and select the `YourBackgroundEverywhereExtension` folder,
 And that's it !
 
 I recommand pinning the YourBackgroundEverywhere button, to quickly change your settings.
+![Example](https://github.com/Otomatyk/YourBackgroundEverywhere/blob/main/images/example.png)
+
+Example
 
 ## How do I contribute ?
 If you have found a bug, a performance issue, a site where the extension doesn't work or if you've a suggestion, you can submit an Issue.
