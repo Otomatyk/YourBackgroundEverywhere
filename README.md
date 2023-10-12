@@ -18,7 +18,7 @@ Go the `YourBackgroundEverywhere/insert_your_background_here` folder, and read `
 
 After it, you have to "pack" the extension, to do so, open your in your browser chrome://extensions, edge://extensions ... ect or click on the top-right corner button (The puzzle piece) > `Manage extensions`.
 Then, active the Developper Mode, the button should be in one of the top corners.
-Press `Load unpacked` and select the `YourBackgroundEverywhereExtension` folder, not the folder where you're actually reading this, the sub-folder.
+Press `Load unpacked` and select the `YourBackgroundEverywhere` folder, not the folder where you're actually reading this, the sub-folder.
 
 And that's it !
 
