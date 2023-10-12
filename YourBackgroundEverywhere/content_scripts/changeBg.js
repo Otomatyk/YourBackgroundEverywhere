@@ -15,12 +15,18 @@
     img.style.display = "none";
     img.src = await chrome.runtime.getURL("insert_your_backgrounds_here/1.png");
 
-    function updateBgStyle(img, params) {
+    async function updateBgStyle(img, params) {
         if(dev) {
             console.log("Params before change style :")
             console.log(params);
         }
         
+        // If the service worker is inactive
+        if(!params) {
+            await chrome.runtime.sendMessage({}); // Wake up it
+            params = (await chrome.runtime.sendMessage({getBackground: true})).params;
+        }
+
         img.style.cssText = `
         ${baseImgStyle};
         z-index: ${params.opacity == 11 ? 10 : -1};
