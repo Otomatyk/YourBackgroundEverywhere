@@ -6,18 +6,21 @@
     // Fetch the parameters from the background script
     // params.opacity and request.opacity are always in the 1-11 range
     let params = (await chrome.runtime.sendMessage({getBackground: true})).params;
-    const dev = true;
+    const dev = false;
 
     img = document.createElement("img");
     img.id = "bgImg";
     img.alt = "Background image"; // Some websites blur images that don't have alternative description
     img.style.cssText = baseImgStyle;
     img.style.display = "none";
-    
+    img.src = await chrome.runtime.getURL("insert_your_backgrounds_here/1.png");
 
     function updateBgStyle(img, params) {
-        console.log("Params before change style :")
-        console.log(params);
+        if(dev) {
+            console.log("Params before change style :")
+            console.log(params);
+        }
+        
         img.style.cssText = `
         ${baseImgStyle};
         z-index: ${params.opacity == 11 ? 10 : -1};
@@ -28,13 +31,13 @@
 
     function getParentElement() {
         const parentElementPriority = [
-            () => (document.getElementsByTagName("h1")[0]?.parentNode),
             () => (document.querySelector("[role=main]")),
             () => (document.getElementById("root")),
             () => (document.getElementById("content")),
             () => (document.getElementsByClassName("content")[0]),
             () => (document.getElementById("layoutMainWrapper")),
             () => (document.getElementById("layoutMain")),
+            () => (document.querySelector("ol[role='list'][tabindex='0']")), //For discord
             () => (document.getElementsByTagName("main")[0]),
             () => (document.getElementById("main")),
             () => (document.getElementsByClassName("main")[0]),
@@ -42,8 +45,13 @@
             () => (document.getElementById("app-mount")),
             () => (document.getElementById("app-root")),
             () => (document.getElementById("app")),
+            () => (document.getElementsByClassName("application-main")[0]),
+            () => (document.getElementsByClassName("main-container")[0]),
+	    () => (document.getElementsByClassName("Layout-main")[0]),
+            () => (document.getElementsByTagName("h1")[0]?.parentNode),
             () => (document.getElementById("container")),
             () => (document.getElementsByClassName("container")[0]),
+            () => (document.getElementsByClassName("hero")[0]),
             () => (document.getElementsByTagName("section")[0]),
             () => (document.body)
         ];
@@ -69,11 +77,12 @@
         }
 
         updateBgStyle(img, params);
-        img.src = await chrome.runtime.getURL("insert_your_backgrounds_here/1.png");
+        
         imgParent.prepend(img);
 
         if(dev) {
             console.log("Succesfully added the background.");
+            console.log(`${imgParent.tagName}.${imgParent.classList}#${imgParent.id}`)
             console.log(img);
             console.log(`
             Opacity : ${params.opacity};
@@ -82,8 +91,9 @@
         }
     }
     // With SetTimeout the parent is found when the frontend librairy has been loaded
-    setTimeout(main, 100);
-    setTimeout(main, 2500);
+    setTimeout(main, 250);
+    setTimeout(main, 2000);
+    setTimeout(main, 7500);
 
     // Update the style when the parameters has been changed
     chrome.runtime.onMessage.addListener(
