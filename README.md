@@ -1,4 +1,4 @@
-![YourBackgroundEverywhere's logo](https://github.com/Otomatyk/YourBackgroundEverywhere/blob/main/images/mini_icon.png)
+![YourBackgroundEverywhere's logo](https://github.com/Otomatyk/YourBackgroundEverywhere/blob/main/images/mini_logo.png)
 
 (If you have a logo suggestion, I'd love to hear from you.)
 
